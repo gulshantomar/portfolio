@@ -64,6 +64,7 @@ const features = [
     cta: "Book a Call",
     background: (
       <NotificationList className="absolute opacity-50" />
+      // <div className=""></div>
     ),
     className: "lg:col-start-1  lg:col-end-3 lg:row-start-1 lg:row-end-2 ",
   },
@@ -95,7 +96,7 @@ const features = [
             <span className="text-xs">US</span> USA
           </motion.div>
         </div>
-        <GlobeFull className="absolute w-160 h-160 transform left-1/2 translate-[-50%] mt-90" />
+        {/* <GlobeFull className="absolute w-160 h-160 transform left-1/2 translate-[-50%] mt-90" /> */}
       </div>
     ),
     className: "lg:col-start-1  lg:col-end-2 lg:row-start-2 lg:row-end-4",

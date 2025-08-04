@@ -215,6 +215,7 @@
 body{
   background:  #0A0A0A;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 /* Marquee animations */

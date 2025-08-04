@@ -1,6 +1,6 @@
 'use client';
 import Lenis from "lenis";
-import React, { use, useEffect } from "react";
+import React, { useEffect } from "react";
 import Hero from "@/components/Hero";
 import BentoGrid from "@/components/BentoGrid";
 import Work from "@/components/work";
@@ -25,6 +25,9 @@ export default function Page() {
       {/* <Work /> */}
       <Skills />
       <Aboutme />
+      {/* <GlobeDemo /> */}
+      {/* <Globe {}/> */}
+
 
     </>
   );

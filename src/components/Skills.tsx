@@ -126,7 +126,7 @@ const Skills = () => {
         <motion.div
           className="absolute top-1/2 -z-6 h-fit  mask-l-from-neutral-950"
           style={{ rotate: rotatee }}
-          transition={{ type: "spring", stiffness: 500, damping: 10 }}
+          transition={{ type:"inertia"}}
         >
           <Image
             src="https://i.ibb.co/My1nVRZ1/steel-flower.webp"
@@ -159,7 +159,8 @@ const Skills = () => {
               alt={item.name}
               width={100}
               height={100}
-              loader={({ src }) => src}
+              loader={ ({ src, width}) => src }
+
               className="w-4 h-4"
             />
             <span className="ml-2">{item.name}</span>
@@ -187,6 +188,7 @@ const Skills = () => {
           alt="sparkle"
           width={40}
           height={40}
+          loader={({ src }) => src}
           className="inline-block mx-7"
         />
       </span>
