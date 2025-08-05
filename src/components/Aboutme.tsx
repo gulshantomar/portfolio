@@ -6,8 +6,9 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
-import { Linkedin } from "lucide-react";
+import { ShinyButton } from "./magicui/shiny-button";
+import { ChevronRight } from "lucide-react";
+
 import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
@@ -16,21 +17,21 @@ import {
 
 const Aboutme = () => {
   return (
-    <div className="container w-4/5 mx-auto  my-10 h-screen">
+    <div className="container w-4/5 mx-auto  my-20">
       <h1 className="text-xl text-white/60 font-semibold py-3">
         Know About Me
       </h1>
 
       <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
-        <div className="w-[60%] relative">
-          <h1 className="font-semibold text-6xl relative">
+        <div className="lg:w-[60%] relative">
+          <h1 className="font-semibold lg:text-6xl text-3xl relative">
             Full-Stack Developer and a little bit of{" "}
             <AuroraText>everything</AuroraText>{" "}
           </h1>
           {/* <div className="absolute top-2/3 left-1/3 w-1/2 inset-0 h-2 bg-white/90 blur-2xl rounded-full"></div> */}
 
           <div className="py-5 text-white/90 ">
-            <p className="text-lg w-4/5 leading-loose flex flex-col gap-8">
+            <p className="text-lg lg:w-4/5 leading-loose flex flex-col gap-8">
               <span>
                 I&apos;m Gulshan Tomar, a proactive full-stack developer
                 passionate about creating dynamic web experiences. From frontend
@@ -75,9 +76,17 @@ const Aboutme = () => {
                 </TooltipContent>
               </Tooltip>
             </div>
+            <div className="mt-5">
+              <ShinyButton
+                onClick={() => window.open("./about#Experience")}
+                className=" text-white  bg-[#0A0A0A] border-none"
+              >
+                Work Experience <ChevronRight className="inline-block w-5 h-5 ml-2 p-1 rounded-full bg-white/20" />
+              </ShinyButton>
+            </div>
           </div>
         </div>
-        <div className="w-[40%] lg:pt-30 flex items-center justify-center">
+        <div className="lg:w-[40%] lg:pt-20 flex items-center justify-center">
           <Image
             src="https://i.ibb.co/cKBcjy0x/profile.jpg"
             alt="Gulshan Tomar"

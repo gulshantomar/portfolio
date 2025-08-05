@@ -121,10 +121,10 @@ const Skills = () => {
 
   return (
     <div className=" justify-items-center">
-      <div className=" relative h-64 w-96 flex items-end justify-center mx-4">
+      <div className=" relative lg:h-64 lg:w-96 h-32 w-48 flex items-end justify-center mx-4">
         <h1 className="text-white/80 text-xl font-sans "> My Skills</h1>
         <motion.div
-          className="absolute top-1/2 -z-6 h-fit  mask-l-from-neutral-950"
+          className="absolute lg:top-1/2 top-0 -z-6 h-fit  mask-l-from-neutral-950"
           style={{ rotate: rotatee }}
           transition={{ type:"inertia"}}
         >
@@ -134,11 +134,11 @@ const Skills = () => {
             width={100}
             height={100}
             loader={({ src }) => src}
-            className="transform translate-[-50%,-50%] h-58 w-74 object-cover opacity-55"
+            className="transform translate-[-50%,-50%] h-58 w-74 object-cover opacity-30 lg:opacity-55 "
           />
         </motion.div>
       </div>
-      <h1 className="text-6xl font-sans font-semibold text-center mb-5 relative">
+      <h1 className="lg:text-6xl text-5xl font-sans font-semibold text-center mb-5 relative">
         <div className="absolute top-1/2 inset-0 h-3 bg-white/50 blur-2xl rounded-full"></div>
         <span className="relative z-10">
           The Secret{" "}
@@ -148,11 +148,11 @@ const Skills = () => {
         </span>
       </h1>
 
-      <div className="flex flex-wrap justify-center items-center w-2/3 mx-auto gap-2 p-4">
+      <div className="flex flex-wrap justify-center items-center lg:w-2/3 w-4/5 mx-auto gap-2 pt-10 lg:p-4">
         {arr.map((item, index) => (
           <div
             key={index}
-            className="relative h-full text-xs w-fit mx-[1rem] my-2 flex items-center justify-start border border-white/20 rounded-md px-2 py-1"
+            className="relative h-full text-xs w-fit lg:mx-[1rem] my-2 flex items-center justify-start border border-white/20 rounded-md px-2 py-1"
           >
             <Image
               src={item.logo}
@@ -177,7 +177,7 @@ const Skills = () => {
 
   
   <Marquee
-    className="absolute w-[130%] text-xl font-semibold bg-[#3D7BFD] py-3 left-[-15%]"
+    className="absolute w-[130%] lg:text-xl text-sm font-semibold bg-[#3D7BFD] py-3 left-[-15%]"
     style={{ rotate: "-4deg" }}
   >
     {qualities.map((item, index) => (
@@ -188,8 +188,8 @@ const Skills = () => {
           alt="sparkle"
           width={40}
           height={40}
-          loader={({ src }) => src}
-          className="inline-block mx-7"
+          loader={({ src , width}) => src}
+          className="inline-block lg:mx-7 mx-1"
         />
       </span>
     ))}

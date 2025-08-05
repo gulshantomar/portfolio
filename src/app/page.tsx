@@ -6,6 +6,8 @@ import BentoGrid from "@/components/BentoGrid";
 import Work from "@/components/work";
 import Skills from "@/components/Skills";
 import Aboutme from "@/components/Aboutme";
+import Experiment from "@/components/Experiment";
+
 
 export default function Page() {
 
@@ -25,8 +27,7 @@ export default function Page() {
       {/* <Work /> */}
       <Skills />
       <Aboutme />
-      {/* <GlobeDemo /> */}
-      {/* <Globe {}/> */}
+      <Experiment />
 
 
     </>

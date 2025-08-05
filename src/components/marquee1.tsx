@@ -93,7 +93,7 @@ export const Marqueee = () => {
 
   return (<div className="pt-15" >
   
-    <Marquee pauseOnHover={true} reverse={true} className="my-8 z-20" >
+    <Marquee pauseOnHover={true} reverse={true} className="lg:my-8 z-20" >
       {arr.map((item, index) => (
         <div
           key={index}
@@ -104,7 +104,7 @@ export const Marqueee = () => {
         </div>
       ))}
     </Marquee>
-    <Marquee className="my-8">
+    <Marquee className="lg:my-8">
       {arr2.map((item, index) => (
         <div
           key={index}
@@ -115,7 +115,7 @@ export const Marqueee = () => {
         </div>
       ))}
     </Marquee>
-    <Marquee className="my-8">
+    <Marquee className="lg:my-8">
       {arr3.map((item, index) => (
         <div
           key={index}

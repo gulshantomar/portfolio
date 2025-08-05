@@ -53,7 +53,6 @@ const files = [
   },
 ];
 
-
 const features = [
   {
     Icon: HeartHandshake,
@@ -83,7 +82,6 @@ const features = [
             zone communications
           </span>
         </h1>
-
 
         <div className=" flex gap-2 justify-center mt-15">
           <motion.div className="div border border-white/20 px-3 py-1 rounded-sm">
@@ -133,7 +131,6 @@ const features = [
           </figure>
         ))}
       </Marquee>
-      
     ),
   },
 ];
@@ -142,53 +139,13 @@ const BentoGridt = () => {
   const [clipboardCopy, setClipboardCopy] = useState("hello@gulshantomar.in");
 
   return (
-    <div>
-      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 p-40">
+    <div className="flex flex-col items-center justify-center">
+      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:p-40 p-10">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
-        <div className="relative flex-col  overflow-hidden lg:col-start-3  lg:col-end-4 lg:row-start-1 lg:row-end-3 bg-white/4 border border-white/10 rounded-xl bg-[url('/path/to/image.jpg')]">
-          <h1 className="text-2xl font-bold bg-gradient-to-b from-[#DAD4E6] to-[#D5B0DC] inline-block text-transparent bg-clip-text pt-15 text-center">
-            Passionate about cutting-{" "}
-            <span className="bg-gradient-to-b from-[#D3A1D7] to-[#CA7CCB] inline-block text-transparent bg-clip-text">
-              edge technologies
-            </span>
-          </h1>
-          <Marqueee />
-          <motion.div
-            className="w-60 h-64 mt-24 mx-auto border border-white/10 rounded-md"
-            whileTap={{ scale: 0.9 }}
-            whileHover={{ y: 15 }}
-            initial={{ scale: 1 }}
-          >
-            <div className="w-60 h-5 text-center mx-auto bg-white/5 flex items-center gap-2 px-2">
-              <div className="h-2 w-2 bg-red-500 rounded-full"></div>
-              <div className="h-2 w-2 bg-cyan-100 rounded-full"></div>
-              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <span></span>
-            </div>
-            <div className="w-60 h-59 text-center mx-auto bg-white/0 p-4 ">
-              <div className="h-4 w-20 bg-white/5 mx-auto rounded-full flex justify-end items-center p-2">
-                <div className="w-2 h-2 bg-black/90 rounded-full"></div>
-              </div>
-              <h1 className="text-md font-semibold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text pt-8 text-center">
-                Websites that stand out{" "}
-                <span className="bg-gradient-to-b from-[#91A7D3] to-[#7D98CC] inline-block text-transparent bg-clip-text">
-                  {" "}
-                  and make a difference
-                </span>
-              </h1>
-              <div className="flex gap-4 justify-center pt-6">
-                <button className="bg-[#6E28E8]  text-[7px] text-white p-2 py-1  rounded-md">Get Started</button>
-                <button className="border border-white/20 text-[7px] text-white p-2 py-1  rounded-md">Read More</button>
-              </div>
-            </div>
-          </motion.div>
-          <BackgroundBeams className="absolute inset-0 -z-10 scale-100" />
-
-        </div>
-        <div
-          className="relative overflow-hidden lg:col-start-2  lg:col-end-3 lg:row-start-2 lg:row-end-3 bg-white/4 border border-white/10 rounded-xl "
+<div
+          className="group col-span-3 relative overflow-hidden lg:col-start-2  lg:col-end-3 lg:row-start-2 lg:row-end-3 bg-white/4 border border-white/10 rounded-xl "
           style={{ backgroundImage: "url('')" }}
         >
           <div className="flex-col items-center justify-center h-full flex">
@@ -222,8 +179,51 @@ const BentoGridt = () => {
             </motion.div>
           </div>
           <RetroGrid className="absolute inset-0 -z-10 scale-150" />
-
         </div>
+        <div className=" group  col-span-3 relative flex-col  overflow-hidden lg:col-start-3  lg:col-end-4 lg:row-start-1 lg:row-end-3 bg-white/4 border border-white/10 rounded-xl bg-[url('/path/to/image.jpg')]">
+          <h1 className="text-2xl font-bold bg-gradient-to-b from-[#DAD4E6] to-[#D5B0DC] inline-block text-transparent bg-clip-text pt-15 text-center">
+            Passionate about cutting-{" "}
+            <span className="bg-gradient-to-b from-[#D3A1D7] to-[#CA7CCB] inline-block text-transparent bg-clip-text">
+              edge technologies
+            </span>
+          </h1>
+          <Marqueee />
+          <motion.div
+            className="w-60 h-64 mt-24 mx-auto border border-white/10 rounded-md"
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ y: 15 }}
+            initial={{ scale: 1 }}
+          >
+            <div className="w-60 h-5 text-center mx-auto bg-white/5 flex items-center gap-2 px-2">
+              <div className="h-2 w-2 bg-red-500 rounded-full"></div>
+              <div className="h-2 w-2 bg-cyan-100 rounded-full"></div>
+              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
+              <span></span>
+            </div>
+            <div className="w-60 h-59 text-center mx-auto bg-white/0 p-4 ">
+              <div className="h-4 w-20 bg-white/5 mx-auto rounded-full flex justify-end items-center p-2">
+                <div className="w-2 h-2 bg-black/90 rounded-full"></div>
+              </div>
+              <h1 className="text-md font-semibold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text pt-8 text-center">
+                Websites that stand out{" "}
+                <span className="bg-gradient-to-b from-[#91A7D3] to-[#7D98CC] inline-block text-transparent bg-clip-text">
+                  {" "}
+                  and make a difference
+                </span>
+              </h1>
+              <div className="flex gap-4 justify-center pt-6">
+                <button className="bg-[#6E28E8]  text-[7px] text-white p-2 py-1  rounded-md">
+                  Get Started
+                </button>
+                <button className="border border-white/20 text-[7px] text-white p-2 py-1  rounded-md">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </motion.div>
+          <BackgroundBeams className="absolute inset-0 -z-10 scale-100" />
+        </div>
+        
       </BentoGrid>
     </div>
   );
