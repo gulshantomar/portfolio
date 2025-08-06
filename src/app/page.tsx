@@ -24,7 +24,7 @@ export default function Page() {
     <>
       <Hero />
       <BentoGrid />
-      {/* <Work /> */}
+      <Work />
       <Skills />
       <Aboutme />
       <Experiment />

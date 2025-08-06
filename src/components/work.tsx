@@ -1,55 +1,157 @@
 "use client";
 import React from "react";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { StickyScroll } from "@/components/ui/sticky-scroll";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { ArrowRight, ChevronRight, Heading } from "lucide-react";
+import Image from "next/image";
+import { motion } from "motion/react";
 
+const tilt ={
+  animate:{scale: 1.1,rotate:-5 , y:20}
+}
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "AQI Predictor",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
-      </div>
+      "The AQI Predictor is an innovative web application The project's core mission is to forecast future Air Quality Index (AQI) trends by analyzing historical data, providing users with valuable insights into upcoming air quality.",
+    features: [
+      "Predictive AQI Forecasting: Utilizes historical data to generate future AQI trend forecasts. Users can select a city and prediction frequency to see a visual plot of expected air quality.",
+
+      "User-Friendly Interface: Designed for ease of use, allowing users to quickly access and understand air quality data.",
+      "Data Visualization: Presents AQI trends and real-time data in an intuitive graphical format, making it easy to interpret air quality changes over time.",
+    ],
+    techStack: [
+      { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
+      { name: "tailwindcss", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react" },
+      { name: "GSAP", icon: "https://cdn.simpleicons.org/greensock" },
+      { name: "Chart.js", icon: "https://cdn.simpleicons.org/chartdotjs" },
+      { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+      { name: "Express.js", icon: "https://cdn.simpleicons.org/express/white" },
+    ],
+    heading :"A data-driven tool for visualizing real-time air quality and forecasting future trends with detailed pollutant analysis.",
+    image: "https://i.ibb.co/3y0f1b5/shg-connect.png",
+
+    content :(
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#4E132C] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
+              <div className="flex items-center  justify-between">
+                <h1 className="text-[#FDA5D5] text-md lg:text-xl">
+                  A data-driven tool for visualizing real-time air quality and forecasting future trends with detailed pollutant analysis.
+                </h1>
+                <ArrowRight className=" text-[#FDA5D5] scale-200 " />
+              </div>
+              <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
+                <Image
+                  src="/aqiScreen.png"
+                  alt="SHG Connect"
+                  width={550}
+                  height={550}
+                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#ff509c]"
+                />
+              </motion.div>
+            </motion.div>
     ),
+    color: "bg-[#E60076] text-[#E60076]",
   },
   {
-    title: "Real time changes",
+    title: "SHG Connect",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
-        Real time changes
-      </div>
+      "A web application designed to digitize and empower women's Self-Help Groups (SHGs) by replacing fragile paper-based systems. It provides real-time transparency, secure mobile-first management for leaders, and powerful oversight dashboards for community officers.",
+    features: [
+      "Total Transparency: Members can see their savings and loan status anytime, from anywhere.",
+      "Streamlined Leadership: Leaders can manage meetings, records, and transactions—all from their phones.",
+      "Oversight Tools: Block Officers get a powerful dashboard with real-time SHG analytics to monitor progress and provide support.",
+    ],
+    techStack: [
+      { name: "Nextjs", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+      { name: "Node js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+      { name: "Redis", icon: "https://cdn.simpleicons.org/redis" },
+      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/white" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react" },
+    ],
+    content :(
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
+              <div className="flex items-center justify-between">
+                <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4">
+                  A digital platform that brings real-time transparency and
+                  streamlined financial management to SHGs.
+                </h1>
+                <ArrowRight className=" text-[#009689] scale-150 " />
+              </div>
+              <motion.div  className=" h-1/2 lg:h-2/3  w-[90%]" variants={tilt} >
+                <Image
+                  src="/shgScreen.png"
+                  alt="SHG Connect"
+                  width={550}
+                  height={550}
+                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#30c1b5]"
+                />
+              </motion.div>
+            </motion.div>
     ),
+    color: "bg-[#009689] text-[#009689]",
   },
+  
   {
-    title: "Version control",
+    title: "Personal Portfolio",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
-      </div>
+      "A personal portfolio showcasing modern web design and user experience with sleek layouts, smooth animations, and highlights of my skills and projects.",
+    features: [
+      "Built with Next.js and TypeScript for performance and scalability.",
+      "Investor behavior analysis and interaction patterns.",
+      "Market trend insights and competitive analysis.",
+    ],
+    techStack: [
+      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react" },
+      { name: "mongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
+    ],
+    content :(
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-8 border-[#151515] bg-[#2b194e] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
+              <div className="flex items-center justify-between">
+                <h1 className="text-[#DAB2FF] text-xl">
+                  Design Unleased a capitivating portfolio showcasing innovative Web Development and UI/UX.
+                </h1>
+                <ArrowRight className=" text-[#DAB2FF] scale-150 " />
+              </div>
+              <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
+                <Image
+                  src="/portfolioScreen.png"
+                  alt="SHG Connect"
+                  width={550}
+                  height={550}
+                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#9e43ff]"
+                />
+              </motion.div>
+            </motion.div>
     ),
-  },
-  {
-    title: "Running out of content",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
-      </div>
-    ),
+    color: "bg-[#9810FA] text-[#9810FA]",
   },
 ];
 export default function Work() {
   return (
     <div className="w-full py-4">
-      <h2>Featured Case Studies</h2>
-      <h1>Curated work</h1>
+      <h1 className="text-white/60 text-center text-lg font-sans ">
+        Featured Case Studies
+      </h1>
+      <div className="lg:text-6xl text-4xl font-sans font-semibold text-center mb-5 relative">
+        {/* <div className="absolute top-1/2 w-full inset-0 h-3 bg-white/50 blur-2xl rounded-full"></div> */}
+        <AuroraText className="" speed={2}>
+          Curated Work
+        </AuroraText>
+        
+      </div>
+      <div className="w-full ">
+        <StickyScroll content={content} />
+      </div>
     </div>
   );
 }
