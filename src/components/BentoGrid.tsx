@@ -94,7 +94,7 @@ const features = [
             <span className="text-xs">US</span> USA
           </motion.div>
         </div>
-        {/* <GlobeFull className="absolute w-160 h-160 transform left-1/2 translate-[-50%] mt-90" /> */}
+        <GlobeFull className="absolute w-160 h-160 transform left-1/2 translate-[-50%] mt-90" />
       </div>
     ),
     className: "lg:col-start-1  lg:col-end-2 lg:row-start-2 lg:row-end-4",

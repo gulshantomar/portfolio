@@ -50,11 +50,11 @@ const BentoCard = ({
     )}
     {...props}
   >
-    <div>{background}</div>
+    <div className=" h-full">{background}</div>
     <div className="p-4">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
-        <h3 className="text-md text-white/50 ">{name}</h3>
-        <p className=" text-xl font-semibold ">{description}</p>
+        <h3 className="text-sm text-white/50 ">{name}</h3>
+        <p className=" text-md font-semibold ">{description}</p>
       </div>
 
       <div

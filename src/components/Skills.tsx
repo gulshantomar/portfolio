@@ -188,7 +188,10 @@ const Skills = () => {
           alt="sparkle"
           width={40}
           height={40}
-          loader={({ src , width}) => src}
+          loader={({ src , width}) => {
+            return src;
+            
+          }}
           className="inline-block lg:mx-7 mx-1"
         />
       </span>

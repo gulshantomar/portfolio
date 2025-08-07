@@ -20,7 +20,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="flex fixed inset-x-0 z-100 top-0 justify-between lg:px-30 pt-8 items-center backdrop-blur-xs px-10">
+      <div className="flex fixed inset-x-0 z-200 top-0  justify-between lg:px-30 pt-8 items-center backdrop-blur-xs px-10 ">
         <RectangleGoggles className="w-10 h-10 text-white lg:mb-5  p-2 rounded-full text-shadow-white-200" />
 
         <div className="hidden lg:flex gap-1 z-100 text-sm items-center rounded-full p-1 px-2  bg-white/10 backdrop-blur-xl shadow-lg">

@@ -15,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <body className="relative select-none"
       >
-        <NavBar />
+        <NavBar/>
         {children}
         <Footer />
       </body>

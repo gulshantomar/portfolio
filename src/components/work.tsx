@@ -100,11 +100,13 @@ const content = [
   {
     title: "Personal Portfolio",
     description:
-      "A personal portfolio showcasing modern web design and user experience with sleek layouts, smooth animations, and highlights of my skills and projects.",
+      "A personal portfolio website showcasing my skills, projects, and experiences as a Full Stack Developer. It features a modern design, interactive elements, and responsive layout for an engaging user experience.",
     features: [
       "Built with Next.js and TypeScript for performance and scalability.",
       "Investor behavior analysis and interaction patterns.",
       "Market trend insights and competitive analysis.",
+      "Responsive design for seamless viewing on all devices.",
+      "Interactive elements for engaging user experience.",
     ],
     techStack: [
       { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
@@ -117,14 +119,14 @@ const content = [
     content :(
       <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-8 border-[#151515] bg-[#2b194e] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center justify-between">
-                <h1 className="text-[#DAB2FF] text-xl">
+                <h1 className="text-[#DAB2FF] text-md lg:text-xl pr-10">
                   Design Unleased a capitivating portfolio showcasing innovative Web Development and UI/UX.
                 </h1>
                 <ArrowRight className=" text-[#DAB2FF] scale-150 " />
               </div>
               <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
                 <Image
-                  src="/portfolioScreen.png"
+                  src="/PortfolioScreen.png"
                   alt="SHG Connect"
                   width={550}
                   height={550}
