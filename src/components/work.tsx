@@ -2,7 +2,7 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { ArrowRight, ChevronRight, Heading } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
@@ -53,6 +53,7 @@ const content = [
             </motion.div>
     ),
     color: "bg-[#E60076] text-[#E60076]",
+    href: "/projects/aqi-predictor"
   },
   {
     title: "SHG Connect",
@@ -95,8 +96,8 @@ const content = [
             </motion.div>
     ),
     color: "bg-[#009689] text-[#009689]",
+    href: "/projects/shg-connect"
   },
-  
   {
     title: "Personal Portfolio",
     description:
@@ -136,6 +137,7 @@ const content = [
             </motion.div>
     ),
     color: "bg-[#9810FA] text-[#9810FA]",
+    href: "/projects/portfolio"
   },
 ];
 export default function Work() {

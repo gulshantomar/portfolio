@@ -52,7 +52,7 @@ const Footer = () => {
             LET&apos;s MAKE IT <span className="font-bold">HAPPEN!</span>
           </motion.h1>
         </div>
-        <InteractiveHoverButton className="bg-black">
+        <InteractiveHoverButton onClick={() => window.open("https://linkedin.com/in/gulshantomar", "_blank")} className="bg-black">
           Let&apos;s Connect
         </InteractiveHoverButton>
         <h2 className="text-2xl font-semibold">

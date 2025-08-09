@@ -5,6 +5,7 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Sparkle } from "lucide-react";
+import Link from "next/link";
 
 export const StickyScroll = ({
   content,
@@ -17,6 +18,7 @@ export const StickyScroll = ({
     techStack: { name: string; icon: string }[];
     content?: React.ReactNode;
     color?: string;
+    href: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -47,14 +49,14 @@ export const StickyScroll = ({
         <div className={`lg:w-2/3 lg:pl-20 `}>
           <div className="">
             {content.map((item, index) => (
-              <motion.div
-                key={item.title + index}
-                className="h-screen flex items-center justify-center"
-              >
-                <div className={cn("lg:h-140 w-full mx-15 border border-white/30 rounded-xl", contentClassName)}>
+              <Link key={item.title + index} href={item.href}>
+                <motion.div
+                  className="h-screen flex items-center justify-center"
+                >
+                  <div className={cn("lg:h-140 w-full mx-15 border border-white/30 rounded-xl", contentClassName)}>
                   {item.content ||null}
                 </div>
-              </motion.div>
+              </motion.div></Link>
             ))}
           </div>
         </div>

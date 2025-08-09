@@ -1,9 +1,11 @@
 import React from 'react'
-
-const page = () => {
+import Work from '@/components/work'
+const projects = () => {
   return (
-    <div>page</div>
+    <div className='mt-30'>
+      <Work />
+    </div>
   )
 }
 
-export default page
+export default projects
