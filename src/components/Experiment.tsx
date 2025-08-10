@@ -72,7 +72,7 @@ const Experiment = () => {
         </div>
         <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:px-40 px-10 lg:py-10 py-5">
         {features.map((feature) => (
-          <BentoCard onClick={() => window.open(feature.href)} key={feature.name} {...feature} />
+          <BentoCard onClick={() => window.open(feature.href,"_self")} key={feature.name} {...feature} />
         ))}
       </BentoGrid>
       </div>

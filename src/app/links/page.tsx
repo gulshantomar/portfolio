@@ -1,13 +1,36 @@
-'use client';
+"use client";
 import React from "react";
 import Image from "next/image";
-import { AuroraText } from "@/components/magicui/aurora-text";
-import {motion} from "motion/react";
+import {  Rocket } from "lucide-react";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
-const links =[]
+const links = [
+  {
+    label: "Linkedin",
+    href: "https://www.linkedin.com/in/gulshan-tomar/",
+    icon: "https://img.icons8.com/ios/250/ffffff/linkedin.png",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/gulshantomar",
+    icon: "https://img.icons8.com/ios/250/ffffff/github.png",
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com/gulshantomar_",
+    icon: "https://img.icons8.com/ios/250/ffffff/twitter.png",
+  },
+  {
+    label:"Telegram",
+    href: "https://t.me/gulshan_tomar",
+    icon: "https://img.icons8.com/ios/250/ffffff/telegram.png",
+  },
+  
+];
 const AllLinks = () => {
   return (
-    <div className="w-full h-screen pt-40 grid justify-items-center relative">
+    <div className="w-full h-screen flex flex-col items-center gap-3 pt-30 justify-items-center relative">
       <Image
         src="/bg.avif"
         alt="AllLinks"
@@ -17,13 +40,31 @@ const AllLinks = () => {
       />
       <Image
         src="/profile.jpg"
-        alt="AllLinks"
-        // layout="fill"
-        width={120}
-        height={120}
-        
-        className=" h-30 w-30 rounded-full"
+        alt="Profile"
+        width={1000}
+        height={1000}
+        className="h-30 rotate-3 object-top-center object-cover w-30 rounded-full"
       />
+      <h1 className="text-2xl font-semibold">Gulshan Tomar</h1>
+      <div className="flex gap-3 text-sm">
+        <div className="border border-white/10 bg-white/10 p-3 rounded-xl py-1">
+          Developer
+        </div>
+        <div className="border border-white/10 p-3 rounded-xl bg-white/10 py-1">
+          Freelancer
+        </div>
+        <div className="border border-white/10 p-3 rounded-xl bg-white/10 py-1">
+          Problem Solver
+        </div>
+      </div>
+      <div className="grid grid-cols-1 w-80 items-center gap-3">
+        {links.map((link) => (
+          <Link href={link.href} key={link.label} className="border z-100 border-white/20 justify-between p-3 bg-white/12 items-center rounded-xl flex w-full">
+            {link.label}
+            <Image src={link.icon} alt={`${link.label} icon`} loader={() => link.icon} width={24} height={24} className=" ml-2" />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

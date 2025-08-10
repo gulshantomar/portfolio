@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <div className="lg:pt-30 pt-20 h-screen">
         <div className="hero items-center text-center flex flex-col lg:gap-12 gap-5 pt-10">
-          <ShinyButton className="py-1 px-4 text-xs text-white/80 rounded-full">
+          <ShinyButton className="py-1 px-4 text-xs text-white/80 rounded-full" onClick={()=>window.open("https://shgconnect.vercel.app")}>
             <span className="text-sm bg-blue-500 px-2 mr-2 rounded-full">
               New
             </span>

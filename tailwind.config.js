@@ -1,5 +1,9 @@
+const {heroui} = require('@heroui/theme');
 // tailwind.config.js
 module.exports = {
+  content: [
+    "./node_modules/@heroui/theme/dist/components/form.js"
+],
   theme: {
     extend: {
       textShadow: {
@@ -14,6 +18,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-  ],
+  plugins: [heroui()],
 };

@@ -80,10 +80,10 @@ const Footer = () => {
         </div>
         <div className=" flex flex-col gap-4 text-sm">
           <h3 className="font-semibold">Specifics</h3>
-          <Link href={"/guest-book"}>Guest Book</Link>
-          <Link href={"/about"}>Bucket List </Link>
-          <Link href={"/projects"}>Uses</Link>
-          <Link href={"/blog"}>Attribution</Link>
+          <Link href={"/guestbook"}>Guest Book</Link>
+          <Link href={"/bucket-list"}>Bucket List </Link>
+          <Link href={"/uses"}>Uses</Link>
+          <Link href={"/attribution"}>Attribution</Link>
         </div>
         <div className="flex flex-col gap-4 text-sm">
           <h3 className="font-semibold">More</h3>

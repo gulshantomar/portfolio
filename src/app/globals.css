@@ -207,7 +207,7 @@
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#171819] rounded-xl;
+    @apply bg-[#51555C] rounded-xl;
   }
 
 }
