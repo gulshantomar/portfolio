@@ -6,7 +6,6 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Sparkle } from "lucide-react";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export const StickyScroll = ({
   content,
@@ -32,61 +31,40 @@ export const StickyScroll = ({
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // Calculate which card should be active based on scroll progress
-    // Each card gets equal space in the scroll range (0 to 1)
     const scrollPercent = Math.max(0, Math.min(1, latest));
     const cardIndex = Math.floor(scrollPercent * cardLength);
-
-    // Clamp to valid range
     const activeIndex = Math.min(cardIndex, cardLength - 1);
-
     setActiveCard(activeIndex);
   });
 
   return (
     <div ref={ref} className="relative bg-[#0A0A0A]">
-      <div className="lg:flex lg:px-20">
-        {/* Scrollable Rectangle Content */}
-        <div className={`lg:w-2/3 lg:pl-20 `}>
-          <div className="">
-            {content.map((item, index) => (
-              <Link key={item.title + index} href={item.href}>
-                <motion.div
-                  className="h-screen flex items-center justify-center"
-                >
-                  <div className={cn("lg:h-140 w-full mx-15 border border-white/30 rounded-xl", contentClassName)}>
-                  {item.content ||null}
-                </div>
-              </motion.div></Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Sticky Text Content */}
-        <div className=" relative ">
-          <div className="lg:sticky lg:top-0 lg:h-screen flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row lg:px-20">
+        {/* Text Content - Shows first on mobile, second on desktop */}
+        <div className="w-full lg:w-1/3 order-1 lg:order-2">
+          <div className="px-4 lg:px-0 lg:sticky lg:top-0 lg:h-screen flex items-center justify-center py-8 lg:py-0">
             <motion.div
-              className="pr-8 py-16 max-w-lg"
+              className="w-full lg:pr-8 lg:py-16 max-w-full lg:max-w-lg"
               key={activeCard}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <div className="mb-4">
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-4 lg:mb-6">
                   <div
-                    className={`h-1 w-6 ${content[activeCard].color} mr-4 rounded-full`}
+                    className={`h-1 w-4 lg:w-6 ${content[activeCard].color} mr-2 lg:mr-4 rounded-full`}
                   ></div>
-                  <h2 className="text-3xl font-bold text-white">
+                  <h2 className="text-xl lg:text-3xl font-bold text-white">
                     {content[activeCard].title}
                   </h2>
                 </div>
 
-                <p className="text-md text-gray-300 leading-relaxed mb-8">
+                <p className="text-sm lg:text-md text-gray-300 leading-relaxed mb-6 lg:mb-8">
                   {content[activeCard].description}
                 </p>
 
-                <div className="space-y-4 mb-8">
+                <div className="space-y-2 lg:space-y-4 mb-6 lg:mb-8">
                   {content[activeCard].features.map((feature, featureIndex) => (
                     <motion.div
                       key={featureIndex}
@@ -95,10 +73,10 @@ export const StickyScroll = ({
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
                     >
-                      <div className={`text-${content[activeCard].color} mx-3 mt-3 `}>
-                        <Sparkle className="h-3 w-3 " />
+                      <div className={`${content[activeCard].color} mx-2 lg:mx-3 mt-2 lg:mt-3`}>
+                        <Sparkle className="h-3 w-3" />
                       </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">
+                      <p className="text-gray-300 text-xs lg:text-sm leading-relaxed">
                         {feature}
                       </p>
                     </motion.div>
@@ -109,7 +87,7 @@ export const StickyScroll = ({
                   {content[activeCard].techStack.map((tech, techIndex) => (
                     <motion.div
                       key={techIndex}
-                      className="flex items-center bg-gray-800 rounded-full px-3 py-1 text-sm"
+                      className="flex items-center bg-gray-800 rounded-full px-2 lg:px-3 py-1 text-xs lg:text-sm"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{
@@ -119,12 +97,13 @@ export const StickyScroll = ({
                         stiffness: 200,
                       }}
                     >
-                      <span className="mr-2">
+                      <span className="mr-1 lg:mr-2">
                         <Image
                           src={tech.icon}
                           alt={tech.name}
-                          width={16}
-                          height={16}
+                          width={14}
+                          height={14}
+                          className="lg:w-4 lg:h-4"
                           loader={({ src, width }) => src}
                         />
                       </span>
@@ -136,6 +115,23 @@ export const StickyScroll = ({
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+
+        {/* Scrollable Rectangle Content - Shows second on mobile, first on desktop */}
+        <div className="w-full lg:w-2/3 lg:pl-20 order-2 lg:order-1">
+          <div>
+            {content.map((item, index) => (
+              <Link key={item.title + index} href={item.href}>
+                <motion.div
+                  className="min-h-[50vh] lg:h-screen flex items-center justify-center py-4 lg:py-0"
+                >
+                  <div className={cn("w-full mx-4 lg:mx-15 border border-white/30 rounded-xl ", contentClassName)}>
+                    {item.content || null}
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

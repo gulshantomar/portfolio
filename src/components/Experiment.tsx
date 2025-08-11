@@ -63,7 +63,7 @@ const features = [
 const Experiment = () => {
   return (
     <>
-      <div className=" justify-items-center h-screen pt-20">
+      <div className=" justify-items-center h-fit pt-20">
         <h1 className="text-white/60 text-lg font-sans "> My Site</h1>
         <div className="lg:text-6xl text-4xl font-sans font-semibold text-center mb-5 relative">
           <h1>Explore, experiment</h1>

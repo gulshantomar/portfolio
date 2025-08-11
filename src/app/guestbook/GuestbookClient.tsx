@@ -118,7 +118,7 @@ export default function GuestbookClient() {
   }
 
   return (
-    <div className="max-w-3xl min-h-screen mx-auto px-4 pt-30">
+    <div className="max-w-3xl min-h-screen mx-auto lg:px-4 px-8 pt-30">
       <Image
               src="/bg.avif"
               alt="Uses"
@@ -128,7 +128,7 @@ export default function GuestbookClient() {
               className="absolute -z-100 inset-0 object-cover mask-b-from-neutral-900  opacity-20"
             />
       <div className="text-center text-sm text-white/50 mb-3">THE GUESTBOOK</div>
-      <h1 className="text-center lg:text-5xl text-3xl font-bold"> <AuroraText className="text-6xl font-bold" speed={2}>
+      <h1 className="text-center lg:text-5xl text-3xl font-bold"> <AuroraText className="lg:text-6xl text-4xl font-bold" speed={2}>
                Got a message ?
               </AuroraText> I&apos;d
               <br />

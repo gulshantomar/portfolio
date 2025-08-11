@@ -7,8 +7,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ShinyButton } from "@/components/magicui/shiny-button";
-import { ChevronRight } from "lucide-react";
 
 import {
   GitHubLogoIcon,
@@ -21,20 +19,20 @@ const About = () => {
   
   return (
     <div className="pt-20">
-      <div className="container w-4/5 px-10 mx-auto  my-10">
-        <h1 className="text-xl text-white/60 font-semibold py-3">
+      <div className="container w-4/5 lg:px-10 mx-auto  my-10">
+        <h1 className="lg:text-xl text-white/60 font-semibold py-3">
           More About Me
         </h1>
 
-        <div className="flex items-center justify-between gap-10 flex-col md:flex-row">
+        <div className="flex items-center justify-between gap-10 flex-col lg:flex-row">
           <div className="lg:w-[60%] relative">
-            <h1 className="font-semibold lg:text-6xl w-4/5 text-3xl relative">
+            <h1 className="font-semibold lg:text-6xl lg:w-4/5 text-2xl relative">
               I&apos;m Gulshan, a creative <AuroraText>engineer</AuroraText>{" "}
             </h1>
             {/* <div className="absolute top-2/3 left-1/3 w-1/2 inset-0 h-2 bg-white/90 blur-2xl rounded-full"></div> */}
 
             <div className="py-5 text-white/90 ">
-              <p className="text-lg lg:w-4/5 leading-loose flex flex-col gap-8">
+              <p className="lg:text-lg lg:w-4/5 leading-loose flex flex-col gap-8">
                 <span>
                   I&apos;m Gulshan Tomar, a proactive full-stack developer
                   passionate about creating dynamic web experiences. From
@@ -114,7 +112,7 @@ const About = () => {
               alt="Gulshan Tomar"
               width={500}
               height={500}
-              className="rounded-3xl w-96 h-96 object-cover object-center justify-center"
+              className="rounded-3xl w-96 lg:h-96 h-64  object-cover object-center justify-center"
             />
           </div>
         </div>
@@ -128,7 +126,7 @@ const About = () => {
         <h1 className="text-md text-white/60 font-semibold py-3">
           The Experience
         </h1>
-        <h1 className="font-semibold lg:text-6xl w-[40%]  text-3xl relative">
+        <h1 className="font-semibold lg:text-6xl lg:w-[40%] w-[70%]  text-3xl relative">
           Experience That Brings <AuroraText>Ideas to Life</AuroraText>{" "}
         </h1>
       </div>

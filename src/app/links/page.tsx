@@ -6,23 +6,23 @@ import Link from "next/link";
 const links = [
   {
     label: "Linkedin",
-    href: "https://www.linkedin.com/in/gulshan-tomar/",
-    icon: "https://img.icons8.com/ios/250/ffffff/linkedin.png",
+    href: "https://www.linkedin.com/in/gulshantomar/",
+    icon: "/linkedin.png",
   },
   {
     label: "GitHub",
     href: "https://github.com/gulshantomar",
-    icon: "https://img.icons8.com/ios/250/ffffff/github.png",
+    icon: "/github.png",
   },
   {
     label: "Twitter",
     href: "https://twitter.com/gulshantomar_",
-    icon: "https://img.icons8.com/ios/250/ffffff/twitter.png",
+    icon: "/twitter.png",
   },
   {
     label:"Telegram",
     href: "https://t.me/gulshan_tomar",
-    icon: "https://img.icons8.com/ios/250/ffffff/telegram.png",
+    icon: "/telegram.png",
   },
   
 ];

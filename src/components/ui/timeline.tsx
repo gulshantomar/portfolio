@@ -78,29 +78,29 @@ export const Timeline = () => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full font-sans md:px-10" ref={containerRef}>
-      <div className="flex px-50">
-        <div ref={ref} className="w-fit">
+    <div className="w-full font-sans px-4 lg:px-10" ref={containerRef}>
+      <div className="flex lg:px-20">
+        <div ref={ref} className="w-full">
           {data.map((item, index) => {
             return (
-              <div key={index} className="mb-13 flex gap-50">
-                <div className="flex flex-col gap-2 text-xs text-white/50  w-[90%]">
-                  <h3 className=" font-semibold ">{item.timeline}</h3>
+              <div key={index} className="mb-12 ml-5 lg:mb-16 flex flex-col lg:flex-row gap-6 lg:gap-12">
+                <div className="flex flex-col gap-2 text-xs text-white/50 lg:w-1/3 lg:min-w-[300px]">
+                  <h3 className="font-semibold">{item.timeline}</h3>
                   <h1 className="text-white text-xl font-extrabold font-sans">
                     {item.title}
                   </h1>
-                  <p>
-                    <MapPin className="h-4 pr-2 inline-block w-fit" />
+                  <p className="flex items-center">
+                    <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
                     {item.location}
                   </p>
-                  <p>
-                    <LaptopIcon className="h-4 pr-2 inline-block w-fit" />
+                  <p className="flex items-center">
+                    <LaptopIcon className="h-4 w-4 mr-2 flex-shrink-0" />
                     {item.type}
                   </p>
                 </div>
-                <div className="">
-                  <h1 className="text-2xl font-semibold">{item.role}</h1>
-                  <p className="text-md w-150 pt-4 text-white/50">
+                <div className="flex-1">
+                  <h1 className="text-xl lg:text-2xl font-semibold mb-4">{item.role}</h1>
+                  <p className="text-sm lg:text-base text-white/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -109,13 +109,13 @@ export const Timeline = () => {
           })}
         </div>
         <motion.div
-            transition={{ delay: 0.5 }}
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute  inset-x-0 top-0 left-1/3 w-[6px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
-          />
+          transition={{ delay: 0.5 }}
+          style={{
+            height: heightTransform,
+            opacity: opacityTransform,
+          }}
+          className="hidden lg:block absolute inset-x-0 top-0 lg:left-[calc(33.333%-3px)] left-3 w-[6px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+        />
       </div>
     </div>
   );

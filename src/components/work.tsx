@@ -142,19 +142,31 @@ const content = [
 ];
 export default function Work() {
   return (
-    <div className="w-full py-4">
-      <h1 className="text-white/60 text-center text-lg font-sans ">
+    <div className="w-full py-4 ">
+      <h1 className="text-white/60 text-center lg:text-lg text-md font-sans ">
         Featured Case Studies
       </h1>
-      <div className="lg:text-6xl text-4xl font-sans font-semibold text-center mb-5 relative">
+      <div className="lg:text-6xl text-5xl font-sans font-semibold text-center mb-5 relative">
         {/* <div className="absolute top-1/2 w-full inset-0 h-3 bg-white/50 blur-2xl rounded-full"></div> */}
         <AuroraText className="" speed={2}>
           Curated Work
         </AuroraText>
         
       </div>
-      <div className="w-full ">
+      
+      {/* Desktop view - single sticky scroll with all content */}
+      <div className="w-full hidden lg:block">
         <StickyScroll content={content} />
+      </div>
+
+      {/* Mobile view - separate sticky scroll for each content item */}
+      <div className="w-full lg:hidden">
+        {content.map((item, index) => (
+          <div key={index} className="">
+            <StickyScroll content={[item]} />
+            <div className="w-full border border-white/30"></div>
+          </div>
+        ))}
       </div>
     </div>
   );

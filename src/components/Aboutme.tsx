@@ -88,7 +88,7 @@ const Aboutme = () => {
         </div>
         <div className="lg:w-[40%] lg:pt-20 flex items-center justify-center">
           <Image
-            src="https://i.ibb.co/cKBcjy0x/profile.jpg"
+            src="/profile.jpg"
             alt="Gulshan Tomar"
             width={500}
             height={500}
