@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Sparkle } from "lucide-react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export const StickyScroll = ({
   content,

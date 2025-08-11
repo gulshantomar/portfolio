@@ -7,6 +7,7 @@ import Command from "@/components/command";
 import { motion } from "motion/react";
 import Image from "next/image";
 import BookCall from "./BookCall";
+import { redirect } from "next/navigation";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -90,7 +91,7 @@ const NavBar = () => {
   return (
     <>
       <div className="flex fixed inset-x-0 z-200 top-0 justify-between lg:px-30 pt-8 items-center  px-10 ">
-        <Image src="/logo.png" alt="Logo" width={1000} height={1000} className="w-12 h-12 text-white backdrop-blur-2xl bg-transparent  p-2 rounded-full text-shadow-white-200" />
+        <Image onClick={()=>redirect("/")} src="/logo.png" alt="Logo" width={1000} height={1000} className="w-12 h-12 text-white backdrop-blur-2xl bg-transparent  p-2 rounded-full text-shadow-white-200" />
 
         <div className="">
           <div className="hidden lg:flex gap-1 z-100 text-sm items-center rounded-full px-2 py-1 bg-white/10 border border-white/10 backdrop-blur-2xl shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
@@ -128,11 +129,7 @@ const NavBar = () => {
           )}
         </div>
         </div>
-        <div className="hiddenlg:block ">
-          {/* <p>press</p> */}
           <Command />
-        </div>
-        <Menu className="lg:hidden flex w-6 h-6 text-white cursor-pointer" />
       </div>
     </>
   );

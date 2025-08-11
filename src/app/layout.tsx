@@ -6,6 +6,11 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Gulshan Tomar - Developer, Freelancer & Problem Solver",
   description: "Personal portfolio of Gulshan Tomar, showcasing skills in web development, freelancing, and problem-solving.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

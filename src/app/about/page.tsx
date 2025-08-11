@@ -97,7 +97,7 @@ const About = () => {
                   </TooltipContent>
                 </Tooltip>
               </div>
-              <div className="mt-5">
+              {/* <div className="mt-5">
                 <ShinyButton
                   onClick={() => window.open("./about#Experience")}
                   className=" text-white  bg-[#0A0A0A] border-none"
@@ -105,7 +105,7 @@ const About = () => {
                   Work Experience{" "}
                   <ChevronRight className="inline-block w-5 h-5 ml-2 p-1 rounded-full bg-white/20" />
                 </ShinyButton>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="lg:w-[40%]  flex items-center justify-center">

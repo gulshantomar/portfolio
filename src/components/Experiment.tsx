@@ -4,6 +4,7 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid2";
 import { motion } from "motion/react";
 import { BackgroundBeams } from "./ui/background-beams";
+import { redirect } from "next/navigation";
 
 const outline ={
     animate: {y: -10, border:"solid 2px #7C86FF"}
@@ -33,7 +34,7 @@ const features = [
   {
     name: "Guestbook",
     description: "Let me Know You were here",
-    href: "/",
+    href: "/guestbook",
     cta: "Leave a message",
     background: (
       <div className="relative text-center h-full w-full flex flex-col justify-center items-center pt-10 px-4">
@@ -72,7 +73,7 @@ const Experiment = () => {
         </div>
         <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:px-40 px-10 lg:py-10 py-5">
         {features.map((feature) => (
-          <BentoCard onClick={() => window.open(feature.href,"_self")} key={feature.name} {...feature} />
+          <BentoCard onClick={() => redirect(feature.href)} key={feature.name} {...feature} />
         ))}
       </BentoGrid>
       </div>
