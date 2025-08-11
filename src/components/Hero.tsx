@@ -40,7 +40,7 @@ const Hero = () => {
             />
             a Full Stack Developer
           </h1>
-          <div className="flex lg:flex-row flex-col lg:gap-6 gap-10 text-white/70 ">
+          <div className="flex lg:flex-row flex-col lg:gap-6 w-fit  gap-10 text-white/70 ">
             <InteractiveHoverButton
               onClick={() => {
                 window.open("https://linkedin.com/in/gulshantomar", "_blank");
@@ -58,13 +58,13 @@ const Hero = () => {
                   setClipboardCopy("hello@gulshantomar.in");
                 }, 2000);
               }}
-              className="button flex items-center gap-2 "
+              className="button flex items-center gap-2 w-full"
             >
               {" "}
               {clipboardCopy === "hello@gulshantomar.in" ? (
                 <Copy />
               ) : (
-                <CheckCheck />
+                <CheckCheck className="w-fit"/>
               )}{" "}
               {clipboardCopy}
             </motion.div>
@@ -79,7 +79,7 @@ const Hero = () => {
                 background="transparent"
                 minSize={0.4}
                 maxSize={1}
-                particleDensity={5}
+                particleDensity={20}
                 className="w-full h-full"
                 particleColor="#FFFFFF"
               />

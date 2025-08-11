@@ -1,4 +1,4 @@
-const {heroui} = require('@heroui/theme');
+
 // tailwind.config.js
 module.exports = {
   content: [
@@ -19,4 +19,6 @@ module.exports = {
     },
   },
   plugins: [heroui()],
+  
+
 };

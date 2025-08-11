@@ -10,21 +10,11 @@ import { cn } from "@/lib/utils";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { ShinyButton } from "./magicui/shiny-button";
-import { Ripple } from "@/components/magicui/ripple";
-import { AnimatedList } from "@/components/magicui/animated-list";
 import { NotificationList } from "@/components/Notification";
-
+import Image from "next/image";
 import {
-  AnimatedSpan,
-  Terminal,
-  TypingAnimation,
-} from "@/components/magicui/terminal";
-
-import {
-  FileText,
   Layout,
   MapPin,
-  RectangleGoggles,
   Copy,
   CheckCheck,
   HeartHandshake,
@@ -149,7 +139,8 @@ const BentoGridt = () => {
           style={{ backgroundImage: "url('')" }}
         >
           <div className="flex-col items-center justify-center h-full flex">
-            <RectangleGoggles className="w-10 h-10 text-black mb-5 bg-white p-2 rounded-full" />
+                    <Image src="/logo.png" alt="Logo" width={1000} height={1000} className="w-12 h-12 text-white lg:mb-5 bg-black p-2 rounded-full text-shadow-white-200" />
+            
             <ShinyButton className="cursor-default border-none bg-transparent scale-205 font-bold">
               Let&apos;s work together{" "}
             </ShinyButton>

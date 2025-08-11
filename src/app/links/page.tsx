@@ -59,9 +59,9 @@ const AllLinks = () => {
       </div>
       <div className="grid grid-cols-1 w-80 items-center gap-3">
         {links.map((link) => (
-          <Link href={link.href} key={link.label} className="border z-100 border-white/20 justify-between p-3 bg-white/12 items-center rounded-xl flex w-full">
+          <Link href={link.href} key={link.label} className="border z-1 border-white/20 justify-between p-3 bg-white/12 items-center rounded-xl flex w-full">
             {link.label}
-            <Image src={link.icon} alt={`${link.label} icon`} loader={() => link.icon} width={24} height={24} className=" ml-2" />
+            <Image  src={link.icon} alt={`${link.label} icon`} loader={(width) => link.icon} width={24} height={24} className=" ml-2" />
           </Link>
         ))}
       </div>
