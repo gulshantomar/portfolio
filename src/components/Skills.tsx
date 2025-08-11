@@ -2,12 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { url } from "inspector";
 import { motion } from "motion/react";
 import { useScroll, useTransform } from "motion/react";
 import { Marquee } from "./magicui/marquee";
-import { Sparkle } from "lucide-react";
-import { root } from "postcss";
 
 const arr = [
   {

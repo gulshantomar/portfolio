@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import {  Rocket } from "lucide-react";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const links = [
@@ -61,7 +59,9 @@ const AllLinks = () => {
         {links.map((link) => (
           <Link href={link.href} key={link.label} className="border z-1 border-white/20 justify-between p-3 bg-white/12 items-center rounded-xl flex w-full">
             {link.label}
-            <Image  src={link.icon} alt={`${link.label} icon`} loader={(width) => link.icon} width={24} height={24} className=" ml-2" />
+            <Image  src={link.icon} alt={`${link.label} icon`} loader={(width) => {
+              return link.icon;
+            }} width={24} height={24} className=" ml-2" />
           </Link>
         ))}
       </div>
