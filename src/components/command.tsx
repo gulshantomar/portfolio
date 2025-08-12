@@ -113,7 +113,7 @@ export default function Command() {
           </CommandGroup>
           <CommandGroup heading="Resources" className="text-white">
             <CommandItem onSelect={() => setOpen(false)}>
-              <Link href="/about" className="flex items-center gap-2 w-full">
+              <Link href="https://drive.google.com/file/d/10yctSxexd0tiQ1WzlTDMC_kb-nxnQvfX/view?usp=drive_link" className="flex items-center gap-2 w-full">
                 <Smile />
                 resume
               </Link>
@@ -122,7 +122,7 @@ export default function Command() {
 
           <CommandGroup heading="Social" className="text-white">
             <CommandItem onSelect={() => setOpen(false)}>
-              <a href="https://github.com/gulshantomar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full">
+              <a href="https://github.com/gulshantomar" target="_blank" rel="noopener noreferrer" className="flex items-center  gap-2 w-full">
                 <Smile />
                 Github
               </a>

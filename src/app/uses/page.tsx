@@ -81,7 +81,7 @@ const tools =[
 ]
 const Uses = () => {
   return (
-    <div className="w-full h-screen pt-40 ">
+    <div className="w-full h-screen lg:pt-40 pt-25 ">
       <Image
         src="/bg.avif"
         alt="Uses"
@@ -98,7 +98,7 @@ const Uses = () => {
          Tools
         </AuroraText> i use Daily</h1>
 
-        <div className="text-sm grid grid-cols-8 p-20 px-30 justify-center items-center gap-6 text-white/60">
+        <div className="text-sm grid lg:grid-cols-8 grid-cols-3 p-20 lg:px-30 justify-center items-center gap-6 text-white/60">
             {tools.map((item,index)=>{
                 return(
                     <div className="flex flex-col h-30 w-26 justify-between items-center gap-2 my-2" key={index}>

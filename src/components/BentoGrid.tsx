@@ -65,7 +65,7 @@ const features = [
     cta: "Connect Now",
     background: (
       <div className="relative  flex-col p-5 ">
-        <h1 className="text-2xl font-bold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text pt-15 text-center">
+        <h1 className="text-2xl font-bold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text lg:pt-15 text-center">
           I&apos;m very flexible with time{" "}
           <span className="bg-gradient-to-b from-[#91A7D3] to-[#7D98CC] inline-block text-transparent bg-clip-text">
             {" "}
@@ -73,7 +73,7 @@ const features = [
           </span>
         </h1>
 
-        <div className=" flex gap-2 justify-center mt-15">
+        <div className=" flex gap-2 justify-center lg:mt-15 mt-3">
           <motion.div className="div border border-white/20 px-3 py-1 rounded-sm">
             <span className="text-xs">GB</span> UK
           </motion.div>
@@ -84,7 +84,7 @@ const features = [
             <span className="text-xs">US</span> USA
           </motion.div>
         </div>
-        <GlobeFull className="absolute w-160 h-160 transform left-1/2 translate-[-50%] mt-90" />
+        <GlobeFull className="absolute   mt-30 lg:w-160 lg:h-160 w-60 h-60 transform left-1/2 translate-[-50%] lg:mt-90" />
       </div>
     ),
     className: "lg:col-start-1  lg:col-end-2 lg:row-start-2 lg:row-end-4",
