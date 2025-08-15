@@ -101,10 +101,10 @@ export const StickyScroll = ({
                         <Image
                           src={tech.icon}
                           alt={tech.name}
-                          width={14}
-                          height={14}
-                          className="lg:w-4 lg:h-4"
-                          loader={({ src, width }) => src}
+                          width={16}
+                          height={16}
+                          className="w-3 h-3 lg:w-4 lg:h-4"
+                          unoptimized
                         />
                       </span>
                       <span className="text-white font-medium">

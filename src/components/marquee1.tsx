@@ -98,7 +98,7 @@ export const Marqueee = () => {
           key={index}
           className="relative h-full text-xs w-fit mx-[1rem] flex items-center justify-start border border-white/20 rounded-md px-2 py-1"
         >
-          <Image alt={item.name} src={item.logo} width={100} height={100} loader={({ src }) => src} className="w-4 h-4" />
+          <Image alt={item.name} src={item.logo} width={100} height={100} unoptimized loader={({ src }) => src} className="w-4 h-4" />
           <span className="ml-2">{item.name}</span>
         </div>
       ))}
@@ -109,7 +109,7 @@ export const Marqueee = () => {
           key={index}
           className="relative h-full text-xs w-fit mx-[1rem] flex items-center justify-start border border-white/20 rounded-md px-2 py-1"
         >
-          <Image alt={item.name} src={item.logo} width={100} height={100} loader={({ src }) => src} className="w-4 h-4" />
+          <Image alt={item.name} src={item.logo} width={100} height={100} unoptimized loader={({ src }) => src} className="w-4 h-4" />
           <span className="ml-2">{item.name}</span>
         </div>
       ))}
@@ -120,7 +120,7 @@ export const Marqueee = () => {
           key={index}
           className="relative h-full text-xs w-fit mx-[1rem] flex items-center justify-start border border-white/20 rounded-md px-2 py-1"
         >
-          <Image alt={item.name} src={item.logo} width={100} height={100} loader={({ src }) => src} className="w-4 h-4" />
+          <Image alt={item.name} src={item.logo} width={100} height={100} unoptimized loader={({ src}) => src} className="w-4 h-4" />
           <span className="ml-2">{item.name}</span>
         </div>
       ))}

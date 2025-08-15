@@ -128,10 +128,10 @@ const Skills = () => {
           <Image
             src="https://i.ibb.co/My1nVRZ1/steel-flower.webp"
             alt="logo"
-            width={100}
-            height={100}
-            loader={({ src }) => src}
-            className="transform translate-[-50%,-50%] h-58 w-74 object-cover opacity-30 lg:opacity-55 "
+            width={296}
+            height={232}
+            className="transform translate-[-50%,-50%] h-58 w-74 object-cover opacity-30 lg:opacity-55"
+            unoptimized
           />
         </motion.div>
       </div>
@@ -154,11 +154,10 @@ const Skills = () => {
             <Image
               src={item.logo}
               alt={item.name}
-              width={100}
-              height={100}
-              loader={ ({ src, width}) => src }
-
+              width={32}
+              height={32}
               className="w-4 h-4"
+              unoptimized
             />
             <span className="ml-2">{item.name}</span>
           </div>
@@ -185,11 +184,8 @@ const Skills = () => {
           alt="sparkle"
           width={40}
           height={40}
-          loader={({ src , width}) => {
-            return src;
-            
-          }}
           className="inline-block lg:mx-7 mx-1"
+          unoptimized
         />
       </span>
     ))}

@@ -171,16 +171,19 @@ const BentoGridt = () => {
           </div>
           <RetroGrid className="absolute inset-0 -z-10 scale-150" />
         </div>
-        <div className=" group  col-span-3 relative flex-col  overflow-hidden lg:col-start-3  lg:col-end-4 lg:row-start-1 lg:row-end-3 bg-white/4 border border-white/10 rounded-xl bg-[url('/path/to/image.jpg')]">
-          <h1 className="text-2xl font-bold bg-gradient-to-b from-[#DAD4E6] to-[#D5B0DC] inline-block text-transparent bg-clip-text pt-15 text-center">
+        {/* Replaced placeholder /path/to/image.jpg (404) with existing /bg.avif */}
+        <div className="group col-span-3 relative flex-col overflow-hidden lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3 border border-white/10 rounded-xl bg-[url('/bg.avif')] bg-cover bg-center before:absolute before:inset-0 before:bg-black/50 before:z-0">
+          <h1 className="relative z-10 text-2xl font-bold bg-gradient-to-b from-[#DAD4E6] to-[#D5B0DC] inline-block text-transparent bg-clip-text pt-15 text-center">
             Passionate about cutting-{" "}
             <span className="bg-gradient-to-b from-[#D3A1D7] to-[#CA7CCB] inline-block text-transparent bg-clip-text">
               edge technologies
             </span>
           </h1>
-          <Marqueee />
+          <div className="relative z-10">
+            <Marqueee />
+          </div>
           <motion.div
-            className="w-60 h-64 mt-24 mx-auto border border-white/10 rounded-md"
+            className="relative z-10 w-60 h-64 mt-24 mx-auto border border-white/10 rounded-md backdrop-blur-sm bg-black/20"
             whileTap={{ scale: 0.9 }}
             whileHover={{ y: 15 }}
             initial={{ scale: 1 }}

@@ -13,9 +13,9 @@ const Footer = () => {
         <Image
           src="/bg.avif"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className="absolute -z-2 mask-t-from-neutral-100 mask-b-from-neutral-100 opacity-90"
+          fill
+          priority
+          className="object-cover absolute -z-2 mask-t-from-neutral-100 mask-b-from-neutral-100 opacity-90"
         />
         <motion.div
           className="hidden lg:block h-30 w-30 rounded-full z-100 cursor-pointer absolute border-8 border-[#1447E6]"

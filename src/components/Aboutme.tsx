@@ -53,7 +53,15 @@ const Aboutme = () => {
             <div className="flex items-center gap-5 mt-5">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <LinkedInLogoIcon onClick={() => window.open("https://www.linkedin.com/in/gulshantomar/", "_blank")} className="w-6 h-6 text-white/60 hover:text-white" />
+                  <LinkedInLogoIcon
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/gulshantomar/",
+                        "_blank"
+                      )
+                    }
+                    className="w-6 h-6 text-white/60 hover:text-white"
+                  />
                 </TooltipTrigger>
                 <TooltipContent className="bg-white text-black">
                   <p>LinkedIn</p>
@@ -61,7 +69,12 @@ const Aboutme = () => {
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <GitHubLogoIcon onClick={() => window.open("https://github.com/gulshantomar", "_blank")} className="w-6 h-6 text-white/60 hover:text-white" />
+                  <GitHubLogoIcon
+                    onClick={() =>
+                      window.open("https://github.com/gulshantomar", "_blank")
+                    }
+                    className="w-6 h-6 text-white/60 hover:text-white"
+                  />
                 </TooltipTrigger>
                 <TooltipContent className="bg-white  text-black">
                   <p>GitHub</p>
@@ -69,7 +82,12 @@ const Aboutme = () => {
               </Tooltip>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <TwitterLogoIcon onClick={() => window.open("https://x.com/gulshantomar_", "_blank")} className="w-6 h-6 text-white/60 hover:text-white" />
+                  <TwitterLogoIcon
+                    onClick={() =>
+                      window.open("https://x.com/gulshantomar_", "_blank")
+                    }
+                    className="w-6 h-6 text-white/60 hover:text-white"
+                  />
                 </TooltipTrigger>
                 <TooltipContent className="bg-white text-black">
                   <p>Twitter</p>
@@ -81,7 +99,8 @@ const Aboutme = () => {
                 onClick={() => window.open("./about#Experience")}
                 className=" text-white  bg-[#0A0A0A] border-none"
               >
-                Work Experience <ChevronRight className="inline-block w-5 h-5 ml-2 p-1 rounded-full bg-white/20" />
+                Work Experience{" "}
+                <ChevronRight className="inline-block w-5 h-5 ml-2 p-1 rounded-full bg-white/20" />
               </ShinyButton>
             </div>
           </div>

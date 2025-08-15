@@ -32,11 +32,11 @@ const Hero = () => {
             Hello, I&apos;m Gulshan Tomar
             <Image
               src="/profile.jpg"
-              alt="logo"
+              alt="Profile photo"
               width={100}
               height={100}
-              className=" lg:h-15 h-30 object-cover object-center justify-center rounded-full lg:w-30 w-30"
-              loader={({ src }) => src}
+              className="lg:h-15 h-30 object-cover object-center justify-center rounded-full lg:w-30 w-30"
+              priority
             />
             a Full Stack Developer
           </h1>

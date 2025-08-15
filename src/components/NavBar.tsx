@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Link2, Menu, BookOpen, Info } from "lucide-react";
+import { Link2, BookOpen, Info } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Command from "@/components/command";
@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import BookCall from "./BookCall";
 import { redirect } from "next/navigation";
+
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -129,7 +130,9 @@ const NavBar = () => {
           )}
         </div>
         </div>
-          <Command />
+          <div className="">
+            <Command />
+          </div>
       </div>
     </>
   );

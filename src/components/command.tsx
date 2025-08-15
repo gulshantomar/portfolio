@@ -21,6 +21,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import {Kbd} from "@heroui/kbd";
 
 export default function Command() {
   const [open, setOpen] = React.useState(false);
@@ -39,8 +40,8 @@ export default function Command() {
 
   return (
     <>
-      <span className="text-3xl " onClick={() => setOpen(true)}>
-        ⌘
+      <span  onClick={() => setOpen(true)}>
+        <Kbd className="text-sm bg-white/7 backdrop-blur-2xl px-2  rounded-full gap-1" >⌘+K</Kbd>
       </span>
 
       <CommandDialog
