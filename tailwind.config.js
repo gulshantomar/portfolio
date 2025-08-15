@@ -2,7 +2,7 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./node_modules/@heroui/theme/dist/components/form.js"
+    "./node_modules/@heroui/theme/dist/components/(form|kbd).js"
 ],
   theme: {
     extend: {

@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^3.24.2",
     "@emotion/react": "^11.14.0",
     "@heroui/form": "^2.1.24",
+    "@heroui/kbd": "^2.2.19",
     "@heroui/system": "^2.4.20",
     "@heroui/theme": "^2.4.20",
     "@mdx-js/loader": "^3.1.0",
