@@ -1,5 +1,4 @@
 
-import createMDX from '@next/mdx'
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,11 +8,7 @@ const nextConfig = {
     domains: ['github.com','cdn.simpleicons.org','i.ibb.co','img.icons8.com','assets.aceternity.com','lh3.googleusercontent.com'],
   },
 }
- 
-const withMDX = createMDX({
-  
-  extension: /\.(md|mdx)$/,
-})
- 
-export default withMDX(nextConfig)
+
+export default nextConfig
+
 
