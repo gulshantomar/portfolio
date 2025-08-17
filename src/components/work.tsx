@@ -164,7 +164,7 @@ export default function Work() {
         {content.map((item, index) => (
           <div key={index} className="">
             <StickyScroll content={[item]} />
-            <div className="w-full border border-white/30"></div>
+            {/* <div className="w-full border border-white/30"></div> */}
           </div>
         ))}
       </div>
