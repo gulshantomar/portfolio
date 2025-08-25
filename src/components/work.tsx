@@ -36,7 +36,7 @@ const content = [
     content :(
       <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#4E132C] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center  justify-between">
-                <h1 className="text-[#FDA5D5] text-md lg:text-xl">
+                <h1 className="text-[#FDA5D5] text-md lg:text-xl pb-4 lg:pb-8">
                   A data-driven tool for visualizing real-time air quality and forecasting future trends with detailed pollutant analysis.
                 </h1>
                 <ArrowRight className=" text-[#FDA5D5] scale-200 " />
@@ -78,7 +78,7 @@ const content = [
     content :(
       <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center justify-between">
-                <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4">
+                <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4 lg:pb-8">
                   A digital platform that brings real-time transparency and
                   streamlined financial management to SHGs.
                 </h1>
@@ -120,7 +120,7 @@ const content = [
     content :(
       <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-8 border-[#151515] bg-[#2b194e] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center justify-between">
-                <h1 className="text-[#DAB2FF] text-md lg:text-xl pr-10">
+                <h1 className="text-[#DAB2FF] text-md lg:text-xl pr-10 pb-4 lg:pb-8">
                   Design Unleased a capitivating portfolio showcasing innovative Web Development and UI/UX.
                 </h1>
                 <ArrowRight className=" text-[#DAB2FF] scale-150 " />

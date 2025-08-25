@@ -44,7 +44,7 @@ export const StickyScroll = ({
         <div className="w-full lg:w-1/3 order-1 lg:order-2">
           <div className="px-4 lg:px-0 lg:sticky lg:top-0 lg:h-screen flex items-center justify-center py-8 lg:py-0">
             <motion.div
-              className="w-full lg:pr-8 lg:py-16 max-w-full lg:max-w-lg"
+              className="w-full px-10 lg:px-0 lg:pr-8 lg:py-16 max-w-full lg:max-w-lg"
               key={activeCard}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -119,14 +119,14 @@ export const StickyScroll = ({
         </div>
 
         {/* Scrollable Rectangle Content - Shows second on mobile, first on desktop */}
-        <div className="w-full lg:w-2/3 lg:pl-20 order-2 lg:order-1">
+        <div className="w-full lg:w-2/3 lg:pl-20 px-10 order-2 lg:order-1">
           <div>
             {content.map((item, index) => (
               <Link key={item.title + index} href={item.href}>
                 <motion.div
                   className="min-h-[50vh] lg:h-screen flex items-center justify-center py-4 lg:py-0"
                 >
-                  <div className={cn("w-full mx-4 lg:mx-15 border border-white/30 rounded-xl ", contentClassName)}>
+                  <div className={cn("w-full mx-4 text-sm lg:text-xl lg:mx-15 border border-white/30 rounded-xl ", contentClassName)}>
                     {item.content || null}
                   </div>
                 </motion.div>

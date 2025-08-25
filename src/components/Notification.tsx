@@ -88,7 +88,7 @@ export function NotificationList({
   return (
     <div
       className={cn(
-        "relative flex h-[500px] w-full flex-col overflow-hidden p-2",
+        "relative flex lg:h-[500px] h-[300px] w-full lg:p-2 flex-col overflow-hidden px-20",
         className,
       )}
     >

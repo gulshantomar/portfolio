@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import { Copy, CheckCheck } from "lucide-react";
+import { Copy, CheckCheck, NotepadText } from "lucide-react";
 import { SparklesCore } from "./ui/sparkles";
 
 const Hero = () => {
@@ -12,17 +12,17 @@ const Hero = () => {
   return (
     <>
       <div className="lg:pt-30 pt-20 h-screen">
-        <div className="hero items-center text-center flex flex-col lg:gap-12 gap-5 pt-10">
-          <ShinyButton className="py-1 px-4 text-xs text-white/80 rounded-full" onClick={()=>window.open("https://shgconnect.vercel.app")}>
+        <motion.div initial={{y: 200, opacity: 0}}  animate={{y: 0, opacity: 1}} transition={{duration: 0.5}} className="hero items-center text-center flex flex-col lg:gap-12 gap-5 pt-10">
+          <ShinyButton className="py-1 px-4 text-2xs text-white/80 rounded-full" onClick={()=>window.open("https://shgconnect.vercel.app")}>
             <span className="text-sm bg-blue-500 px-2 mr-2 rounded-full">
               New
             </span>
             SHG Connect is live! &gt;{" "}
           </ShinyButton>
-          <h1 className="lg:text-6xl text-4xl font-bold font-sans">
+          <h1 className="lg:text-6xl text-3xl font-bold font-sans">
             I help founders turn ideas
           </h1>
-          <h1 className="lg:text-6xl text-4xl font-sans font-bold">
+          <h1 className="lg:text-6xl text-3xl lg:w-full w-4/5  font-sans font-bold">
             into seamless{" "}
             <span className="text-white italic font-playfair mask-t-from-neutral-900">
               digital experiences
@@ -40,12 +40,12 @@ const Hero = () => {
             />
             a Full Stack Developer
           </h1>
-          <div className="flex lg:flex-row flex-col lg:gap-6 w-fit  gap-10 text-white/70 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-fit   text-white/70 ">
             <InteractiveHoverButton
               onClick={() => {
                 window.open("https://linkedin.com/in/gulshantomar", "_blank");
               }}
-              className="bg-black w-[90%]"
+              className="bg-black mx-auto"
             >
               Let&apos;s Connect
             </InteractiveHoverButton>
@@ -68,7 +68,12 @@ const Hero = () => {
               )}{" "}
               {clipboardCopy}
             </motion.div>
+            
           </div>
+          <motion.div whileHover={{ scale: 0.95 }} onClick={() => window.open("https://drive.google.com/file/d/1CkLOkgqcNULQGyRiRCA7Y9oLfttOzcf5/view?usp=sharing", "_blank")} className="flex justify-center items-center gap-2 p-4 py-2 w-fit cursor-pointer mx-auto border-1 bg-white/10 rounded-full">
+              <NotepadText className="animate" />
+              <span className="text-white/70 "> View Resume</span>
+            </motion.div>
 
           <div className="h-lvh w-full top-0 -z-10 absolute overflow-hidden">
             
@@ -85,7 +90,7 @@ const Hero = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

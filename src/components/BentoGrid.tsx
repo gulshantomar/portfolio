@@ -52,7 +52,7 @@ const features = [
     href: "/",
     cta: "Book a Call",
     background: (
-      <NotificationList className="absolute opacity-50" />
+      <NotificationList className=" absolute opacity-50" />
       // <div className=""></div>
     ),
     className: "lg:col-start-1  lg:col-end-3 lg:row-start-1 lg:row-end-2 ",
@@ -65,7 +65,7 @@ const features = [
     cta: "Connect Now",
     background: (
       <div className="relative  flex-col p-5 ">
-        <h1 className="text-2xl font-bold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text lg:pt-15 text-center">
+        <h1 className="lg:text-2xl text-xl font-bold bg-gradient-to-b from-[#D0D5E5] to-[#AFBEDC] inline-block text-transparent bg-clip-text lg:pt-15 text-center">
           I&apos;m very flexible with time{" "}
           <span className="bg-gradient-to-b from-[#91A7D3] to-[#7D98CC] inline-block text-transparent bg-clip-text">
             {" "}
@@ -84,7 +84,7 @@ const features = [
             <span className="text-xs">US</span> USA
           </motion.div>
         </div>
-        <GlobeFull className="absolute   mt-30 lg:w-160 lg:h-160 w-60 h-60 transform left-1/2 translate-[-50%] lg:mt-90" />
+        <GlobeFull className="absolute   mt-25 lg:w-160 lg:h-160 w-45 h-45 transform left-1/2 translate-[-50%] lg:mt-90" />
       </div>
     ),
     className: "lg:col-start-1  lg:col-end-2 lg:row-start-2 lg:row-end-4",
@@ -130,7 +130,7 @@ const BentoGridt = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:p-40 p-10">
+      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:p-40 p-10 ">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
@@ -172,7 +172,7 @@ const BentoGridt = () => {
           <RetroGrid className="absolute inset-0 -z-10 scale-150" />
         </div>
         {/* Replaced placeholder /path/to/image.jpg (404) with existing /bg.avif */}
-        <div className="group col-span-3 relative flex-col overflow-hidden lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3 border border-white/10 rounded-xl bg-[url('/bg.avif')] bg-cover bg-center before:absolute before:inset-0 before:bg-black/50 before:z-0">
+        <div className="group col-span-3 relative flex-col overflow-hidden lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3 border border-white/10 rounded-xl bg-[url('/bg.avif')] lg:bg-cover bg-center before:absolute before:inset-0 before:bg-black/50 before:z-0">
           <h1 className="relative z-10 text-2xl font-bold bg-gradient-to-b from-[#DAD4E6] to-[#D5B0DC] inline-block text-transparent bg-clip-text pt-15 text-center">
             Passionate about cutting-{" "}
             <span className="bg-gradient-to-b from-[#D3A1D7] to-[#CA7CCB] inline-block text-transparent bg-clip-text">
