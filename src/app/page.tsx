@@ -11,14 +11,14 @@ import Experiment from "@/components/Experiment";
 
 export default function Page() {
 
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time: number) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <>
