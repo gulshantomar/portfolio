@@ -33,7 +33,7 @@ const Aboutme = () => {
           <div className="py-5 text-white/90 ">
             <p className="text-lg lg:w-4/5 leading-loose flex flex-col gap-8">
               <span>
-                I&apos;m Gulshan Tomar, a proactive full-stack developer
+                I&apos;m Gulshan Tomar, a full-stack developer
                 passionate about creating dynamic web experiences. From frontend
                 to backend, I thrive on solving complex problems with clean,
                 efficient code. My expertise spans React, Next.js, and Node.js,
