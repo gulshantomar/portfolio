@@ -130,7 +130,7 @@ const BentoGridt = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:p-40 p-10 ">
+      <BentoGrid className="grid-cols-1 gap-4 lg:grid-cols-3 lg:p-40 p-3 ">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}

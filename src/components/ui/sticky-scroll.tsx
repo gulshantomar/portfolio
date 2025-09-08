@@ -42,15 +42,15 @@ export const StickyScroll = ({
       <div className="flex flex-col lg:flex-row lg:px-20">
         {/* Text Content - Shows first on mobile, second on desktop */}
         <div className="w-full lg:w-1/3 order-1 lg:order-2">
-          <div className="px-4 lg:px-0 lg:sticky lg:top-0 lg:h-screen flex items-center justify-center py-8 lg:py-0">
+          <div className=" lg:px-0 lg:sticky lg:top-0 lg:h-screen flex items-center justify-center py-0 lg:py-0">
             <motion.div
-              className="w-full px-10 lg:px-0 lg:pr-8 lg:py-16 max-w-full lg:max-w-lg"
+              className="w-full px-10 lg:px-0 lg:pr-8 lg:pb-16 max-w-full lg:max-w-lg"
               key={activeCard}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <div className="mb-4">
+              <div className="lg:mb-4">
                 <div className="flex items-center mb-4 lg:mb-6">
                   <div
                     className={`h-1 w-4 lg:w-6 ${content[activeCard].color} mr-2 lg:mr-4 rounded-full`}
@@ -119,14 +119,14 @@ export const StickyScroll = ({
         </div>
 
         {/* Scrollable Rectangle Content - Shows second on mobile, first on desktop */}
-        <div className="w-full lg:w-2/3 lg:pl-20 px-10 order-2 lg:order-1">
+        <div className="w-full lg:w-2/3 lg:pl-20 px-1 order-2 lg:order-1">
           <div>
             {content.map((item, index) => (
               <Link key={item.title + index} href={item.href}>
                 <motion.div
-                  className="min-h-[50vh] lg:h-screen flex items-center justify-center py-4 lg:py-0"
+                  className="min-h-[50vh] lg:h-screen flex items-center justify-center py-1 lg:py-0"
                 >
-                  <div className={cn("w-full mx-4 text-sm lg:text-xl lg:mx-15 border border-white/30 rounded-xl ", contentClassName)}>
+                  <div className={cn("w-full mx-4 text-xs lg:text-xl lg:mx-15 border border-white/30 rounded-xl ", contentClassName)}>
                     {item.content || null}
                   </div>
                 </motion.div>

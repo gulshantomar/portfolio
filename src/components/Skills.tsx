@@ -135,7 +135,7 @@ const Skills = () => {
           />
         </motion.div>
       </div>
-      <h1 className="lg:text-6xl text-5xl font-sans font-semibold text-center mb-5 relative">
+      <h1 className="lg:text-6xl text-4xl font-sans font-semibold text-center mb-5 relative">
         <div className="absolute top-1/2 inset-0 h-3 bg-white/50 blur-2xl rounded-full"></div>
         <span className="relative z-10">
           The Secret{" "}

@@ -91,7 +91,7 @@ const NavBar = () => {
   };
   return (
     <>
-      <div className="flex fixed inset-x-0 z-200 top-0 justify-between lg:px-30 pt-8 items-center  px-10 ">
+      <div className="flex fixed inset-x-0 z-200 top-0 justify-between lg:px-30 pt-8 items-center  px-6 ">
         <Image onClick={()=>redirect("/")} src="/logo.png" alt="Logo" width={1000} height={1000} className="w-12 h-12 text-white backdrop-blur-2xl bg-transparent  p-2 rounded-full text-shadow-white-200" />
 
         <div className="">

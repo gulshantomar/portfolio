@@ -34,7 +34,7 @@ const content = [
     image: "https://i.ibb.co/3y0f1b5/shg-connect.png",
 
     content :(
-      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#4E132C] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#4E132C] lg:p-10 p-4 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center  justify-between">
                 <h1 className="text-[#FDA5D5] text-md lg:text-xl pb-4 lg:pb-8">
                   A data-driven tool for visualizing real-time air quality and forecasting future trends with detailed pollutant analysis.
@@ -44,7 +44,7 @@ const content = [
               <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
                 <Image
                   src="/aqiScreen.png"
-                  alt="SHG Connect"
+                  alt="AQI Predictor"
                   width={550}
                   height={550}
                   className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#ff509c]"
@@ -76,7 +76,7 @@ const content = [
       { name: "React", icon: "https://cdn.simpleicons.org/react" },
     ],
     content :(
-      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 pb-0 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center justify-between">
                 <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4 lg:pb-8">
                   A digital platform that brings real-time transparency and
@@ -84,7 +84,7 @@ const content = [
                 </h1>
                 <ArrowRight className=" text-[#009689] scale-150 " />
               </div>
-              <motion.div  className=" h-1/2 lg:h-2/3  w-[90%]" variants={tilt} >
+              <motion.div  className=" h-1/3  w-[90%]" variants={tilt} >
                 <Image
                   src="/shgScreen.png"
                   alt="SHG Connect"
@@ -118,7 +118,7 @@ const content = [
       { name: "mongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
     ],
     content :(
-      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-8 border-[#151515] bg-[#2b194e] p-10 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#2b194e] p-4 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
               <div className="flex items-center justify-between">
                 <h1 className="text-[#DAB2FF] text-md lg:text-xl pr-10 pb-4 lg:pb-8">
                   Design Unleased a capitivating portfolio showcasing innovative Web Development and UI/UX.
@@ -128,7 +128,7 @@ const content = [
               <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
                 <Image
                   src="/PortfolioScreen.png"
-                  alt="SHG Connect"
+                  alt="Portfolio"
                   width={550}
                   height={550}
                   className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#9e43ff]"
@@ -142,11 +142,11 @@ const content = [
 ];
 export default function Work() {
   return (
-    <div className="w-full py-4 ">
+    <div className="w-full lg:py-4 py-20  ">
       <h1 className="text-white/60 text-center lg:text-lg text-md font-sans ">
         Featured Case Studies
       </h1>
-      <div className="lg:text-6xl text-5xl font-sans font-semibold text-center mb-5 relative">
+      <div className="lg:text-6xl text-5xl font-sans  lg:font-semibold font-bold text-center relative mb-5 lg:mb-0">
         {/* <div className="absolute top-1/2 w-full inset-0 h-3 bg-white/50 blur-2xl rounded-full"></div> */}
         <AuroraText className="" speed={2}>
           Curated Work
