@@ -63,7 +63,11 @@ const Footer = () => {
           user experiences.
         </h3>
       </div>
-      <div className=" relative justify-self-center mb-6 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-3  max-w-7xl min-w-md px-4 lg:px-6 bg-[#0F0F0F] rounded-2xl p-4 lg:p-6">
+
+
+
+      
+      <div className=" relative justify-self-center mb-6 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-3  max-w-7xl w-dvw px-4 lg:px-6 bg-[#0F0F0F] rounded-2xl p-4 lg:p-6">
         <div className="hidden lg:col-span-3 col-span-3 sm:col-span-3 lg:flex flex-col gap-2 lg:gap-3 lg:pr-20 lg:pl-6">
           <div className="flex items-center gap-3">
             <RectangleGoggles className="text-white scale-110 lg:scale-125 flex-shrink-0" />
