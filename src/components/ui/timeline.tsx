@@ -1,16 +1,36 @@
 "use client";
 import { LaptopIcon, MapPin } from "lucide-react";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-
 
 const data = [
   {
-    timeline: "OCT - 2024 - PRESENT",
+    timeline: "Aug 2025 – Oct 2025",
+    title: "Mendygo",
+    location: "Muradnagar, Uttar Pradesh",
+    type: "Remote",
+    role: "Frontend Developer Intern",
+    description: (
+      <>
+        Led the end-to-end development of a production-grade industrial
+        monitoring platform, building the entire full-stack architecture from
+        the ground up. I engineered a scalable system that seamlessly integrated
+        complex IoT data into a high-performance, modern SaaS interface. <br />
+        <br />
+        Delivered a 100% SEO-optimized website using advanced metadata and
+        semantic HTML to maximize search engine visibility and growth.
+        Implemented a premium design system featuring glassmorphism and
+        bento-grid layouts for a high-end, responsive user experience. <br />
+        <br />
+        Managed the full production lifecycle and worked with the founder to
+        align technical execution with industrial business goals. Earned a
+        Letter of Recommendation (LOR) for successfully shipping a complete,
+        market-ready digital product independently.
+      </>
+    ),
+  },
+  {
+    timeline: "OCT 2024 - OCT 2025",
     title: "Technocrats Club",
     location: "KIET Group of Institutions",
     type: "Remote",
@@ -51,11 +71,18 @@ const data = [
     role: "Web Development Intern",
     description: (
       <>
-        During this internship, I gained hands-on experience in frontend and backend web development. I worked on creating dynamic and user-friendly web interfaces, learning how to integrate APIs, optimize page performance, and manage code quality. <br /><br />
-The program deepened my understanding of HTML, CSS, JavaScript, and modern frameworks while also teaching me version control using Git and GitHub. Collaborating with fellow interns improved my team coordination and problem-solving skills in real-world project scenarios.</>
+        During this internship, I gained hands-on experience in frontend and
+        backend web development. I worked on creating dynamic and user-friendly
+        web interfaces, learning how to integrate APIs, optimize page
+        performance, and manage code quality. <br />
+        <br />
+        The program deepened my understanding of HTML, CSS, JavaScript, and
+        modern frameworks while also teaching me version control using Git and
+        GitHub. Collaborating with fellow interns improved my team coordination
+        and problem-solving skills in real-world project scenarios.
+      </>
     ),
   },
- 
 ];
 export const Timeline = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -83,7 +110,10 @@ export const Timeline = () => {
         <div ref={ref} className="w-full">
           {data.map((item, index) => {
             return (
-              <div key={index} className="mb-12 ml-5 lg:mb-16 flex flex-col lg:flex-row gap-6 lg:gap-12">
+              <div
+                key={index}
+                className="mb-12 ml-5 lg:mb-16 flex flex-col lg:flex-row gap-6 lg:gap-12"
+              >
                 <div className="flex flex-col gap-2 text-xs text-white/50 lg:w-1/3 lg:min-w-[300px]">
                   <h3 className="font-semibold">{item.timeline}</h3>
                   <h1 className="text-white text-xl font-extrabold font-sans">
@@ -99,7 +129,9 @@ export const Timeline = () => {
                   </p>
                 </div>
                 <div className="flex-1">
-                  <h1 className="text-xl lg:text-2xl font-semibold mb-4">{item.role}</h1>
+                  <h1 className="text-xl lg:text-2xl font-semibold mb-4">
+                    {item.role}
+                  </h1>
                   <p className="text-sm lg:text-base text-white/70 leading-relaxed">
                     {item.description}
                   </p>

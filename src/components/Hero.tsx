@@ -13,11 +13,11 @@ const Hero = () => {
     <>
       <div className="lg:pt-30 pt-20 h-screen">
         <motion.div initial={{y: 200, opacity: 0}}  animate={{y: 0, opacity: 1}} transition={{duration: 0.5}} className="hero items-center text-center flex flex-col lg:gap-12 gap-5 pt-10">
-          <ShinyButton className="py-1 px-4 text-2xs text-white/80 rounded-full" onClick={()=>window.open("https://shgconnect.vercel.app")}>
+          <ShinyButton className="py-1 px-4 text-2xs text-white/80 rounded-full" onClick={()=>window.open("https://studyLockedin.vercel.app")}>
             <span className="text-sm bg-blue-500 px-2 mr-2 rounded-full">
               New
             </span>
-            SHG Connect is live! &gt;{" "}
+            StudyLockedIn is live! &gt;{" "}
           </ShinyButton>
           <h1 className="lg:text-6xl text-3xl font-bold font-sans">
             I help founders turn ideas
@@ -70,7 +70,7 @@ const Hero = () => {
             </motion.div>
             
           </div>
-          <motion.div whileHover={{ scale: 0.95 }} onClick={() => window.open("https://drive.google.com/file/d/1CkLOkgqcNULQGyRiRCA7Y9oLfttOzcf5/view?usp=sharing", "_blank")} className="flex justify-center items-center gap-2 p-4 py-2 w-fit cursor-pointer mx-auto border-1 bg-white/10 rounded-full">
+          <motion.div whileHover={{ scale: 0.95 }} onClick={() => window.open("https://drive.google.com/file/d/1bpEk0I9RrhadWROtGpZ3m7YZHNsbBOKJ/view?usp=sharing", "_blank")} className="flex justify-center items-center gap-2 p-4 py-2 w-fit cursor-pointer mx-auto border-1 bg-white/10 rounded-full">
               <NotepadText className="animate" />
               <span className="text-white/70 "> View Resume</span>
             </motion.div>

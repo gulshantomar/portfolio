@@ -12,6 +12,90 @@ const tilt ={
 
 const content = [
   {
+    title: "StudyLockedIn",
+    description:
+      "StudyLockedIn transforms the chaotic YouTube learning experience into a structured, university-like curriculum. It strips away algorithmic distractions, integrates deep-work tools, and gamifies consistency for the modern self-taught developer.",
+    features: [
+      "Custom distraction-free player that removes YouTube's sidebar and comments.",
+      "Integrated Pomodoro timer and contextual notes for deep-work sessions.",
+      "Organized curriculum structure including Semesters, Subjects, and Topics.",
+      "Secure NextAuth system with Google OAuth and smart password management.",
+    ],
+    techStack: [
+      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react" },
+      { name: "mongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
+      
+    ],
+    content :(
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-2xl border-8 border-[#151515] bg-[#2b194e] p-4 pb-0" whileHover="animate" whileTap={{ scale: 0.9 }}>
+              <div className="flex items-center justify-between">
+                <h1 className="text-[#DAB2FF] text-md lg:text-xl pr-10 pb-4 lg:pb-8">
+                  StudyLockedIn: A distraction-free OS designed to transform YouTube into a structured learning curriculum.
+                </h1>
+                <ArrowRight className=" text-[#DAB2FF] scale-150 " />
+              </div>
+              <motion.div  className="h-2/3 w-[90%]" variants={tilt} >
+                <Image
+                  src="/studylockedin.png"
+                  alt="StudyLockedIn"
+                  width={550}
+                  height={550}
+                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#9e43ff]"
+                />
+              </motion.div>
+            </motion.div>
+    ),
+    color: "bg-[#9810FA] text-[#9810FA]",
+    href: "https://studyLockedin.vercel.app"
+  },
+    {
+    title: "SHG Connect",
+    description:
+      "A web application designed to digitize and empower women's Self-Help Groups (SHGs) by replacing fragile paper-based systems. It provides real-time transparency, secure mobile-first management for leaders, and powerful oversight dashboards for community officers.",
+    features: [
+      "Total Transparency: Members can see their savings and loan status anytime, from anywhere.",
+      "Streamlined Leadership: Leaders can manage meetings, records, and transactions—all from their phones.",
+      "Oversight Tools: Block Officers get a powerful dashboard with real-time SHG analytics to monitor progress and provide support.",
+    ],
+    techStack: [
+      { name: "Nextjs", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+      { name: "Node js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+      { name: "Redis", icon: "https://cdn.simpleicons.org/redis" },
+      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/white" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
+      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react" },
+    ],
+    content :(
+      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 pb-0 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
+              <div className="flex items-center justify-between">
+                <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4 lg:pb-8">
+                  A digital platform that brings real-time transparency and
+                  streamlined financial management to SHGs.
+                </h1>
+                <ArrowRight className=" text-[#009689] scale-150 " />
+              </div>
+              <motion.div  className=" h-1/3  w-[90%]" variants={tilt} >
+                <Image
+                  src="/shgScreen.png"
+                  alt="SHG Connect"
+                  width={550}
+                  height={550}
+                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#30c1b5]"
+                />
+              </motion.div>
+            </motion.div>
+    ),
+    color: "bg-[#009689] text-[#009689]",
+    href: "https://shgconnect.vercel.app/"
+  },
+  {
     title: "AQI Predictor",
     description:
       "The AQI Predictor is an innovative web application The project's core mission is to forecast future Air Quality Index (AQI) trends by analyzing historical data, providing users with valuable insights into upcoming air quality.",
@@ -53,51 +137,9 @@ const content = [
             </motion.div>
     ),
     color: "bg-[#E60076] text-[#E60076]",
-    href: "/projects/aqi-predictor"
+    href: "https://aqi-predictor-immortals.vercel.app/"
   },
-  {
-    title: "SHG Connect",
-    description:
-      "A web application designed to digitize and empower women's Self-Help Groups (SHGs) by replacing fragile paper-based systems. It provides real-time transparency, secure mobile-first management for leaders, and powerful oversight dashboards for community officers.",
-    features: [
-      "Total Transparency: Members can see their savings and loan status anytime, from anywhere.",
-      "Streamlined Leadership: Leaders can manage meetings, records, and transactions—all from their phones.",
-      "Oversight Tools: Block Officers get a powerful dashboard with real-time SHG analytics to monitor progress and provide support.",
-    ],
-    techStack: [
-      { name: "Nextjs", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
-      { name: "Node js", icon: "https://cdn.simpleicons.org/nodedotjs" },
-      { name: "Redis", icon: "https://cdn.simpleicons.org/redis" },
-      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb" },
-      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
-      { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/white" },
-      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript" },
-      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer" },
-      { name: "React", icon: "https://cdn.simpleicons.org/react" },
-    ],
-    content :(
-      <motion.div className="group relative h-full w-full flex flex-col justify-between items-center overflow-hidden rounded-xl bg-[#173C3A] p-4 pb-0 lg:p-10  border-8 border-[#151515] lg:pb-0 " whileHover="animate" whileTap={{ scale: 0.9 }}>
-              <div className="flex items-center justify-between">
-                <h1 className="text-[#07b7a8] text-md lg:text-xl pb-4 lg:pb-8">
-                  A digital platform that brings real-time transparency and
-                  streamlined financial management to SHGs.
-                </h1>
-                <ArrowRight className=" text-[#009689] scale-150 " />
-              </div>
-              <motion.div  className=" h-1/3  w-[90%]" variants={tilt} >
-                <Image
-                  src="/shgScreen.png"
-                  alt="SHG Connect"
-                  width={550}
-                  height={550}
-                  className=" h-full w-full rounded-xl object-cover object-center justify-center shadow-2xl  shadow-[#30c1b5]"
-                />
-              </motion.div>
-            </motion.div>
-    ),
-    color: "bg-[#009689] text-[#009689]",
-    href: "/projects/shg-connect"
-  },
+
   {
     title: "Personal Portfolio",
     description:
@@ -137,7 +179,7 @@ const content = [
             </motion.div>
     ),
     color: "bg-[#9810FA] text-[#9810FA]",
-    href: "/projects/portfolio"
+    href: "/"
   },
 ];
 export default function Work() {
